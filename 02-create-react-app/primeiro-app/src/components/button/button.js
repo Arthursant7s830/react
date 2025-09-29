@@ -1,12 +1,12 @@
-import React from 'react';
+// import React from 'react';
 import './button.css'
 
-class Button extends React.Component {
-    render () {
-        return (
-            <button className='btn'>{this.props.label}</button>
-        )
-    }
+const sayHello = () => {
+    console.log('olá')
+}
+
+const Button = (props) => {
+    return <button className='btn' onClick={sayHello}>{props.label}</button>
 }
 
 Button.defaultProps = {
