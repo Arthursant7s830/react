@@ -5,8 +5,8 @@ import Card from './components/card/card'
 function App() {
   return (
     <>
-      <Card></Card>
-      <Card></Card>
+      <Card title='Título 1' ></Card>
+      <Card title='Título 2' ></Card>
     </>
   );
 }
