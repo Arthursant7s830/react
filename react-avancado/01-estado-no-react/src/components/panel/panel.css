@@ -1,0 +1,12 @@
+.panel {
+    background: url(../panel/imagens/closeup-laptop-keyboard-illumination-backlit-600nw-559031851.webp);
+    width: 100%;
+    height: 425px;
+    background-size: cover;
+    color: white;
+    line-height: 425px;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+
+}
