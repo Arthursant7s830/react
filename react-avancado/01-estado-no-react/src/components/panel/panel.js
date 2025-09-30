@@ -12,6 +12,7 @@ class Panel extends Component {
     render() {
         return (
             <section className="panel" onClick={() => this.setState({ title: 'Olá, mundo!' })}>
+                {/* usar uma function ao invés da arrow function daria erro no meu código */}
                 <h2>{this.state.title}</h2>
             </section>
         )
