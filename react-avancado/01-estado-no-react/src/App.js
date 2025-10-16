@@ -6,7 +6,7 @@ function App() {
     <>
     <DeckOfCards />
     </>
-  );
+  )
 }
 
 export default App
