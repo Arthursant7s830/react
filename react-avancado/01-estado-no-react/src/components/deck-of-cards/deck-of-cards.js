@@ -11,6 +11,22 @@ async function getCards(deckId) {
     return await response.json()
 }
 
+const Cardslist = (props) => {
+    return (
+        <ul>
+            {
+                props.cards.map((card, index) => {
+                    return (
+                        <li key={index}>
+                            <img src={card.image} alt={card.value}></img>
+                        </li>
+                    )
+                })
+            }
+        </ul>
+    )
+}
+
 const DeckOfCards = () => {
 
     const [deck, setDeck] = useState(
@@ -30,63 +46,15 @@ const DeckOfCards = () => {
                 }
             )
         }
-
         fetchData()
 
     }, [])
 
     return (
-
         <section>
-            <ul>
-                {
-                    deck.cards.map((card, index) => {
-                        return (
-                            <li key={index}>
-                                <img src={card.image} alt={card.value}></img>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
+            {deck.cards.length > 0 ? <Cardslist cards={deck.cards} /> : "Nenhuma carta encontrada"}
         </section>
-
     )
-    // constructor() {
-    //     super()
-    //     this.state = {
-    //         cards: []
-    //     }
-    // }
-
-    // async componentDidMount() {
-    //     const deckId = await createDeck()
-    //     const data = await getCards(deckId)
-
-    //     this.setState(
-    //         {
-    //             cards: data.cards
-    //         }
-    //     )
-    // }
-
-    //     render() {
-    //         return (
-    //             <section>
-    //                 <ul>
-    //                     {
-    //                         this.state.cards.map((card, index) => {
-    //                             return (
-    //                                 <li key={index}>
-    //                                     <img src={card.image} alt={card.value}></img>
-    //                                 </li>
-    //                             )
-    //                         })
-    //                     }
-    //                 </ul>
-    //             </section>
-    //         )
-    //     }
 }
 
-export default DeckOfCards
+export default DeckOfCards 
